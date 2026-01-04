@@ -1,0 +1,299 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+#page1{
+    height: 100%;
+    width: 100%;
+}
+
+/* nav css */
+#nav{
+    height: 6vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2vw;
+}
+
+#nav-part1{
+    width: 32%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#nav-part1 h4{
+    font-size: 1vw;
+    font-weight: 600;
+
+}
+
+#nav-part1 h4:hover{
+    color: #888;
+    cursor: pointer;
+}
+#nav img{
+    height: 8vw;
+}
+
+#nav-part2{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#nav-part2 button{
+    padding: 1.1vw 1.6vw;
+    border-radius: 4vw;
+    border: none;
+    background-color: black;
+    color: white;
+    margin: 0.3vw;
+    font-size: 1vw;
+    font-weight: 600;
+}
+#nav-part2 button:nth-child(1){
+    background-color: transparent;
+    color: black;
+}
+
+#nav-part2 button:hover{
+    color: #888;
+    cursor: pointer;
+}
+#nav-part2 button:nth-last-child(1):hover{
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+#content{
+    height: calc(100% - 6vw);
+    width: 100%;
+    align-items: center;
+    margin: 5vw 0vw;
+    /* margin-top: 5vw; */
+}
+
+#content h3{
+    font-size: 1.2vw;
+    padding: 0.5vw 1.3vw;
+    font-weight: 500;
+    background-color: #F2B0EA;
+    width: fit-content;
+    border-radius: 3vw;
+    position: relative;
+    top: 0vw;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 3vw 0vw;
+  
+}
+
+#content h1{
+    font-size: 3.9vw;
+    text-align: center;
+    font-weight: 500;
+    margin: 2vw 0;
+    line-height: 4vw;
+}
+
+#content h4{
+    font-size: 1.1vw;
+    font-weight: 600;
+    text-align: center;
+}
+
+#content button{
+    margin: 2vw 0vw;
+    position: relative;
+    transform: translateX(-50%);
+    font-size: 1vw;
+    background-color: black;
+    color: #fff;
+    padding: 1vw 1.1vw;
+    border: none;
+    left: 50%;
+    border-radius: 20vw;
+
+}
+
+#content button:hover{
+    background-color: #222;
+    cursor: pointer;
+}
+
+/* bottom css */
+#bottom{
+    height: 20vw;
+    width: 100%;
+    padding: 0.2vw;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+#bottom::-webkit-scrollbar{
+    display: none;
+}
+
+.elem{
+    display: inline-block;
+    height: 100%;
+    width: 17vw;
+    margin-right: 2vw;
+    border-radius: 1.3vw;
+    overflow: hidden;
+    position: relative;
+    animation-name: anime;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.elem:hover{
+    cursor: pointer;
+}
+
+#bottom:hover .elem{
+    animation-play-state: paused;
+} 
+
+@keyframes anime{
+        from{
+            transform: translate(0);
+        }
+        to{
+            transform: translate(-100%);
+        }
+    }
+.elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.elem video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.elem .text-bottom{
+    position: absolute;
+    bottom: 0;
+    height: 7vw;
+    width: 100%;
+    /* background-color: black; */
+    color: white;
+    padding: 0vw 1vw;
+}
+
+.elem .text-bottom h4{
+    width: 30%;
+    font-weight: 400;
+    line-height: 1.5vw;
+    margin: 0.5vw 0vw;
+
+}
+
+.text-bottom h5{
+    font-size: 0.9vw;
+    display: inline-block;
+    padding: 0.4vw  0.8vw ;
+    border: 1px solid rgba(216, 209, 209, 0.906);
+    border-radius: 2vw;
+}
+
+#page2{
+    height: 140%;
+    width: 100%;
+    position: relative;
+    padding: 4vw;
+    /* background-color: red; */
+}
+
+#page2 h1{
+    text-align: center;
+    font-size: 3vw;
+    font-weight: 500;
+    margin-bottom: 3vw;
+
+}
+.box{
+    height: 15vw;
+    width: 20vw;
+    border-radius: 1vw;
+    display: inline-block;
+    margin-right: 2.4vw;
+    overflow: hidden;
+    margin-bottom: 4vw;
+    position: relative;  
+}
+
+.box:hover{
+    cursor: pointer;
+}
+
+ 
+
+.box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.box video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.box-bottom{
+    height: 35%;
+    width: 100%;
+    background: linear-gradient(transparent,rgba(0, 0, 0, 0.603));
+    position: absolute;
+    bottom: -30%;
+    transition: all ease 0.6s;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2vw;
+}
+.box-bottom h5{
+    font-size: 1.3vw;
+    font-weight: 600;
+}
+
+.box-bottom i{
+    background-color: #fff;
+    color: black;
+    /* margin-left: 2vw; */
+    padding: 0.6vw 0.6vw;
+    border-radius: 50%;
+    font-size: 1.5vw;
+}
+
+.box:hover .box-bottom {
+    bottom: 0;
+}
+.box:hover{
+    box-shadow: 3px 3px 10px black;
+}
+
